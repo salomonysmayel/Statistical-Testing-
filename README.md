@@ -1,7 +1,8 @@
 # Statistical-Testing
 
 # Project Report 
-# By Carlos Ysmayel                                          IEOR E4150 Professor. Dr. A. B Dieker              
+# By Carlos Ysmayel                                          IEOR E4150 Professor. Dr. A. B Dieker  
+# Columbia University. Department of Engineering 
 
 ## Analysis on Tesla, Inc.
 
