@@ -45,5 +45,7 @@ The histogram of the log-return shows that the distribution of these values for 
 
 To visualize the returns as a time series we plotted together all the securities. They all overlap forming a very noisy looking plot, however we can tell that a few companies diverge more than others from the cluster, as we can see in the next graphic.
 
+![model setup](/IMAGES/returns.png)
+
 
 
