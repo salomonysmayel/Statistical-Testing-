@@ -1,0 +1,2 @@
+# Statistical-Testing-
+Statistical analysis on stock market data by applying hypothesis testing, parameter estimation to see how the data is mathematically distribuited, to elucidate underlying trends and to detect outliers affecting the quality of the data. This project was part of the coursework from Probability and Statistics graduate course that I took from Columbia University's Engineering Department
