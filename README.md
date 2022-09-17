@@ -47,5 +47,41 @@ To visualize the returns as a time series we plotted together all the securities
 
 ![model setup](/IMAGES/returns.png)
 
+Just by looking at this graph we should expect a higher volatility from Tesla, that shows in green deviating more than the other time series curves that appear clustered around zero even at 2020-04 at the first peak of the global pandemic that shows an increase in variance for all the securities. 
+
+Considering  95% confidence, we proceed to perform parameter estimation on the mean and variance of the returns. Since we cannot assume equality in the population variances for the means we need to construct a t-random variable with n-1 degrees of freedom to obtain the confidence interval. Likewise, for the variance a statistic with chi squared n-1 degrees of freedom distribution was computed to obtain the interval. 
+
+![model setup](/IMAGES/confidence_intervals_mean_variance.png)
+
+These results show that the average returns are very close to zero for all the securities, however, all the intervals have more mass on one side than the other, indicating that the returns are almost zero but in all cases with more mass on the positive side of the interval. Also we can see that the variance is very small, but comparing the values we see that the companies in the stock sector have a broader interval, and the automotive sector with the most restricted variances, except for tesla. This may indicate that the tech sector is more volatile than the automotive sector, and that Tesla inclines more to the first and less to the latter. 
+
+
+![model setup](/IMAGES/linear_reg_returns.png)
+
+Went plotting the lines that resulted from the linear regression over time we can see that since the slope is close to zero, just as the data points over time don't diverge too much from zero as we saw on the first study. However our coefficient of determination in all cases is so low that we see the amount of variation on the returns cannot be explained by time.
+
+Pairing based  Analyses
+
+First we perform a hypothesis testing for the equality of the means, first by a case of unknown and unequal variances and second by a paired t-test. If there is no underlying trend affecting both variables at the same time then the result of both tests should be approximate. On both we have a comparison of tesla against all the other companies, on the t-test we also have the results of all the companies against the Nasdaq, that we are considering here to be approximate in behavior to the market. 
+
+![model setup](/IMAGES/tests_means.png)
+
+On the first test for equality of means on all the comparisons we are not able to reject the hypothesis that the means are equal. However we find that for higher p-values, closer statistic value to zero, hence for a given alpha, an interval where the means tend more to be equal. Following this logic we find that tesla compared to the tech companies, like google (p-value 0.95), even Dell, (0.45) the lowest p-value for Tesla with a tech company on this test, these values are all higher that tesla compared to any car manufacturer except for Daimler (0.49).
+
+On the paired test we get different results, the p-values are lower, however, we manage to reject just two null hypothesis, that Ford mean is equal to Nasdaq, and that Toyota mean is equal to Nasdaq, this should not come as a surprise because Toyota not only is not a tech company, but is not even an American company. However we find similar comparison results as to the previous equality of means test. Were the highest p-values come from tesla-apple and tesla-google, two of the biggest tech companies in the world. 
+
+We also have a Linear Regression analysis of Tesla against the other companies, these are the results,
+
+![model setup](/IMAGES/linear_reg_tesla_vs_all.png)
+
+We see from the coefficients of determination that the amount of variation in the response variable is better explained by the input variables in the case of the tech companies. 
+
+Finally we performed a couple of  Multiple Linear Regressions, one Tesla against all the tech companies and one of Tesla against all the automakers. The coefficient of determinations obtained are, Tesla against Tech 0.15, and tesla against all automakers 0.11. Where we see that Tesla’s returns variations are better explained by the tech sector. 
+
+Conclusions 
+
+Knowing that it is very difficult to understand the causes of the behavior of securities, in this study we can at least tell the clients that Tesla is not your typical Automaker, for better or worse. Its behavior is not comparable to its own industry, it may have more commonalities with others, such as the tech industry. This opens the possibilities of even more questions. Is Tesla actually a car manufacturer or should be considered more a technology company offering cars at the moment, or is it because it is changing its own industry, or is even too risky of a company to invest in, maybe driven by hype and pop culture. Difficult to tell. But what we can do is statistically say, given the results of this test, that Tesla’s historic returns are not those of your usual successful car manufacturer. There is much more here happening and we need to continue studying this case.
+
+
 
 
